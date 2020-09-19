@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Библиотека{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h3 class="index-title">
+            Добро пожаловать в личную Бибилиотеку. <br>
+            Тут собрано {{ books_count }} книг из моей коллекции.
+        </h3>
+        {% if username %}
+        <div class="card p-5">
+            <div class="hello-user">
+            <h2>Привет, {{ username }}!</h2>
+            </div>
+            <div class="container index-btns">
+                <a class="btn btn-primary index-btn" href="{% url 'p_library:books_list' %}">Книги</a>
+                <a class="btn btn-primary index-btn" href="{% url 'p_library:authors_list' %}">Авторы</a>
+                <a class="btn btn-primary index-btn" href="{% url 'p_library:publishers' %}">Издательства</a>
+                <a class="btn btn-primary index-btn" href="{% url 'p_library:friends_list' %}">Друзья</a>
+            </div>
+        </div>
+        {% else %}
+
+            <a class="btn btn-info m-5 enter-btn" href="login">Войти</a>
+
+        {% endif %}
+    </div>
+{% endblock %}

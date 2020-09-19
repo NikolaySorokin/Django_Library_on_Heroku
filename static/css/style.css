@@ -1,0 +1,29 @@
+h1 {
+	color: grey;
+}
+
+.enter-btn {
+	width: 50%;
+}
+
+.logout-btn {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.index-btn {
+	width: 10rem;
+}
+
+.copy-count-td {
+	display: flex;
+	justify-content: space-between;
+}
+
+.copy-count-change-btn {
+	width: 2rem;
+}
+
+.book-image {
+	height: 15vw;
+}

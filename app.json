@@ -1,0 +1,6 @@
+{
+  "name": "Local library",
+  "description": "Local library on Heroku",
+  "image": "heroku/python",
+  "keywords": ["python", "django" ]
+}
